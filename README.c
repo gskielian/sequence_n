@@ -1,50 +1,7 @@
 sequence_n
 ==========
 
-#include <stdio.h> 
-#include <limits.h>
-#include <float.h>
-
-int main(int argc, char*argv[]){
-
-  short int shortCurrentIndex = 1, shortIndex = 1, shortStorage = 1;
-//short loop
-//you want to keep on evaluating the fractorial
-//you would like to test whether the next number is greater than the limit
-
-  for( shortIndex = 1; shortIndex < SHRT_MAX; shortIndex++){
-    //n(n-1)(n-2)...
-    shortStorage = 1;
-
-    for( shortCurrentIndex = shortIndex; shortCurrentIndex != 1; shortCurrentIndex--){
-        if(shortStorage*(shortCurrentIndex) > SHRT_MAX){
-          printf("%d! is the maximum factorial we can calculate \n", shortIndex -1);
-          goto section2;
-        }
-        //(cumulative product) * (n-1)
--- VISUAL LINE --                                             1,1           Top
- 
-int test_double(){ 
- 
-  double shortCurrentIndex = 1, shortIndex = 1, shortStorage = 1; 
-    shortStorage = 1; 
- 
-    for( shortCurrentIndex = 1; shortCurrentIndex <= DBL_MAX; shortCurrentIndex++){ 
-        if( shortStorage > DBL_MAX/shortCurrentIndex){ 
-          printf("%f! is the maximum factorial we can calculate \n", shortCurrentIndex -1); 
-          goto section7; 
-        } 
-        //(cumulative product) * (n-1) 
-        shortStorage = shortStorage * (shortCurrentIndex); 
-     
-        printf("%f! = %f \n", shortCurrentIndex, shortStorage);  
-     } 
-  
-  section7: 
-  return 0; 
-} 
-
--- VISUAL LINE --                                             138,0-1       Bot
+-- VISUAL LINE --                                             
 #include <stdio.h>
 #include <limits.h>
 #include <float.h>
